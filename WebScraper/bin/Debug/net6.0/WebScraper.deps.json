@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "WebScraper/1.0.0": {
         "dependencies": {
-          "HtmlAgilityPack": "1.11.46"
+          "HtmlAgilityPack": "1.11.46",
+          "MySqlConnector": "2.2.6"
         },
         "runtime": {
           "WebScraper.dll": {}
@@ -19,6 +20,14 @@
           "lib/netstandard2.0/HtmlAgilityPack.dll": {
             "assemblyVersion": "1.11.46.0",
             "fileVersion": "1.11.46.0"
+          }
+        }
+      },
+      "MySqlConnector/2.2.6": {
+        "runtime": {
+          "lib/net6.0/MySqlConnector.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.2.6.0"
           }
         }
       }
@@ -36,6 +45,13 @@
       "sha512": "sha512-dLMn4EVfJBHWmWK4Uh0XGD76FPLHI0qr2Tm0s1m/xmgiHb1JUb9zB8AzO8HtrkBBlMN6JfCUBYddhqC0hZNR+g==",
       "path": "htmlagilitypack/1.11.46",
       "hashPath": "htmlagilitypack.1.11.46.nupkg.sha512"
+    },
+    "MySqlConnector/2.2.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oYHl9TNhJXBEqfuiaEsOdBPkdULOcCCbqZJzYhy0rtREnMVoluG73GM8+gwBCMb1vbjv9K1ehQnhe0cxdxfOCA==",
+      "path": "mysqlconnector/2.2.6",
+      "hashPath": "mysqlconnector.2.2.6.nupkg.sha512"
     }
   }
 }

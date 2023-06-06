@@ -1,6 +1,8 @@
 ﻿using HtmlAgilityPack;
 using System;
 using System.Net.Http;
+using MySqlConnector;
+
 namespace WebScraper
 {
     internal class Program
@@ -17,19 +19,31 @@ namespace WebScraper
             // Get the temperature
             var temperatureElement = htmlDocument.DocumentNode.SelectSingleNode("//span[@class='CurrentConditions--tempValue--MHmYY']");
             var temperature = temperatureElement.InnerText.Trim();
-            Console.WriteLine("Temperature: " + temperature);
+            
 
-
-            // Get the conditons
+            // Get the conditions
             var conditionElement = htmlDocument.DocumentNode.SelectSingleNode("//div[@class='CurrentConditions--phraseValue--mZC_p']");
             var conditions = conditionElement.InnerText.Trim();
-            Console.WriteLine("Conditions: " + conditions);
+            
 
-            //Get the location
+            // Get the location
             var cityElement = htmlDocument.DocumentNode.SelectSingleNode("//h1[@class='CurrentConditions--location--1YWj_']");
             var city = cityElement.InnerText.Trim();
-            Console.WriteLine("City: " + city);
+            
 
+            // Save the scraped data to MySQL Workbench
+            string connectionString = "server=localhost;port=3306;database=weatherscraper;uid=root;password=password;";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            string insertQuery = "INSERT INTO scrapedata (temperature, conditions, city) VALUES (@temperature, @conditions, @city)";
+            MySqlCommand command = new MySqlCommand(insertQuery, connection);
+            command.Parameters.AddWithValue("@temperature", temperature);
+            command.Parameters.AddWithValue("@conditions", conditions);
+            command.Parameters.AddWithValue("@city", city);
+            command.ExecuteNonQuery();
+
+            connection.Close();
         }
     }
 }

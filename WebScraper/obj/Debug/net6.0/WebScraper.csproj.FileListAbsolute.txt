@@ -15,3 +15,4 @@ C:\Users\kenny\OneDrive\Desktop\Repos\WebScraper\WebScraper\obj\Debug\net6.0\ref
 C:\Users\kenny\OneDrive\Desktop\Repos\WebScraper\WebScraper\obj\Debug\net6.0\WebScraper.pdb
 C:\Users\kenny\OneDrive\Desktop\Repos\WebScraper\WebScraper\obj\Debug\net6.0\WebScraper.genruntimeconfig.cache
 C:\Users\kenny\OneDrive\Desktop\Repos\WebScraper\WebScraper\obj\Debug\net6.0\ref\WebScraper.dll
+C:\Users\kenny\OneDrive\Desktop\Repos\WebScraper\WebScraper\bin\Debug\net6.0\MySqlConnector.dll
